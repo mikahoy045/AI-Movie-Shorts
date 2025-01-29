@@ -18,3 +18,5 @@ movies/*
 tiktok_uploader\
 tiktok_uploader/
 tiktok_uploader/*
+__pycache__/*
+.DS_*

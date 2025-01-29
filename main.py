@@ -719,7 +719,13 @@ class Gui:
 
     def open_directory(self, path):
         path = os.path.realpath(path)
-        os.startfile(path)
+        # os.startfile(path)
+        if sys.platform == "win32":
+            os.startfile(path)
+        elif sys.platform == "darwin":  # macOS
+            subprocess.run(["open", path])
+        else:  # linux variants
+            subprocess.run(["xdg-open", path])
 
     @staticmethod            
     def get_SRT_response(script, models="gpt-4o"):
@@ -784,6 +790,10 @@ if __name__ == "__main__":
         if os.path.isfile(clip):
             os.remove("clips/" + clip)
             
+    # Create necessary directories if they don't exist
+    os.makedirs("clips/audio", exist_ok=True)
+    os.makedirs("clips/video", exist_ok=True)
+
     audio_clips_dir_temp = os.listdir("clips/audio")
     for audio in audio_clips_dir_temp:
         if os.path.isfile(audio):

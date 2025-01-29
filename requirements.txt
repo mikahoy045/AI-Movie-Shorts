@@ -1,4 +1,4 @@
-moviepy
+moviepy==1.0.3
 ffmpeg-python
 subliminal
 babelfish
@@ -8,11 +8,10 @@ beautifulsoup4
 requests
 speechrecognition
 pydub
-youtube-upload
+#youtube-upload
 openai
 elevenlabs
 PyBetterFileIO
-pydub
-moviepy
-speechrecognition
 httplib2
+google-api-python-client
+oauth2client
