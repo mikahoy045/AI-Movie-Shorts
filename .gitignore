@@ -20,3 +20,4 @@ tiktok_uploader/
 tiktok_uploader/*
 __pycache__/*
 .DS_*
+.env

@@ -1,5 +1,7 @@
 {
     "open_api_key": "OPENAPIKEY",
-    "elevenlabs_api_key": "ELEVENLABSAPIKEY"
+    "elevenlabs_api_key": "ELEVENLABSAPIKEY",
+    "huggingface_api_key": "HUGGINGFACEAPIKEY",
+    "grooq_api_key": "GROOQAPIKEY"
 }
   
